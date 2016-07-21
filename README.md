@@ -15,6 +15,6 @@ CodeBook.MD -- codebook for data and transformations
 
 run_analysis.R -- R script for processing source dataset into tidy, summarizied dataset
 
-tidy\_UCI_HAR\_dataset.csv -- contains the tidy data set that can be read into an R dataframe by this command:
+tidy\_UCI_HAR\_dataset.txt -- contains the tidy data set that can be read into an R dataframe by this command:
 
- tidyDataFrame <- read.csv("tidy\_UCI\_HAR_dataset.csv", header=TRUE)
+ tidyDataFrame <- read.table("tidy\_UCI\_HAR_dataset.txt", header=TRUE)

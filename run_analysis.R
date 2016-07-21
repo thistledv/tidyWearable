@@ -77,8 +77,9 @@ run_analysis<-function(datasetDirectory) {
      names(avgDataset) <- newColNames
      
      ## write the dataset to current working directory
-     write.csv(avgDataset,"tidy_UCI_HAR_dataset.csv", row.names = FALSE)
+     write.table(avgDataset,"tidy_UCI_HAR_dataset.txt", row.names = FALSE)
     
+     avgDataset
 }
 
      

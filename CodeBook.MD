@@ -36,7 +36,7 @@ For detailed information on the processing performed by this script, examine the
 
 5. The data variables must now be averaged for each activity and each subject.  I interpret this as wanting to compute average values across all records for a given subject and activity.  For example, there should be a single row for Subject #1/SITTING observations and a single row for Subject #1/STANDING observations, etc.  This is accomplished using ddply in the plyr package.  The splitting is by the subject and activity columns.  The averaging on the other columns is by using colwise(mean).
 
-6. After these processing steps, the tidy data is written to the single file: tidy\_UCI\_HAR\_dataset.csv.  For convenience, the R script also returns the dataframe explicitly.
+6. After these processing steps, the tidy data is written to the single file: tidy\_UCI\_HAR\_dataset.txt.  For convenience, the R script also returns the dataframe explicitly.
 
 ## Tidy Data
 
@@ -44,7 +44,8 @@ Dimension is 180 x 68
 
 This tidy dataset can be loaded into a dataframe by the following command:
 
-    tidyDataFrame <- read.csv("tidy\_UCI\_HAR_dataset.csv", header=TRUE)
+      tidyDataFrame <- read.table("tidy\_UCI\_HAR_dataset.txt", header=TRUE) 
+
 
 
 Column 1 is subject ID, a numeric value from 1 to 30.
