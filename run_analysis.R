@@ -71,13 +71,13 @@ run_analysis<-function(datasetDirectory) {
      
      ## fixup the column names to reflect that they are averages
      newColNames = names(avgDataset)
-     newColNames[3:ncol(avgDataset)] = paste0("average-",newColNames[3:ncol(avgDataset)])
+     newColNames[3:ncol(avgDataset)] = paste0("average",newColNames[3:ncol(avgDataset)])
+     newColNames <- gsub("-","",newColNames)
+    
      names(avgDataset) <- newColNames
      
      ## write the dataset to current working directory
-     write.csv(avgDataset,"tidy_UCI_HAR_dataset.csv")
-     
-     avgDataset
+     write.csv(avgDataset,"tidy_UCI_HAR_dataset.csv", row.names = FALSE)
     
 }
 
